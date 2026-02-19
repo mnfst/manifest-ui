@@ -1,0 +1,34 @@
+# Configuration for actions/labeler
+# Labels PRs based on which files are changed
+
+# UI components
+components:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'registry/**'
+          - 'components/**'
+
+# Website / app
+website:
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'app/**'
+          - 'lib/**'
+          - 'public/**'
+
+# Tests
+tests:
+  - changed-files:
+      - any-glob-to-any-file: '__tests__/**'
+
+# Documentation
+docs:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '*.md'
+          - 'CLAUDE.md'
+
+# CI/CD
+ci:
+  - changed-files:
+      - any-glob-to-any-file: '.github/**'
