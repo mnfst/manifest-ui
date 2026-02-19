@@ -4,7 +4,7 @@ import { AlgoliaDocSearch } from '@/components/layout/doc-search'
 import { ThemeToggle } from '@/components/theme/theme-toggle'
 import { blockCategories } from '@/lib/blocks-categories'
 import { cn } from '@/lib/utils'
-import { ArrowUpRight, ChevronRight, Github, Menu, Star, X } from 'lucide-react'
+import { ChevronRight, Github, Menu, Star, X } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { Suspense, useEffect, useState } from 'react'
@@ -24,12 +24,7 @@ function DiscordIcon({ className }: { className?: string }) {
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/blocks', label: 'Blocks' },
-  {
-    href: 'https://manifest.build',
-    label: 'Your App in ChatGPT',
-    external: true
-  }
+  { href: '/blocks', label: 'Blocks' }
 ]
 
 function formatStars(count: number): string {
@@ -105,8 +100,6 @@ function MobileMenuContent({
               key={link.label}
               href={link.href}
               onClick={onClose}
-              target={link.external ? '_blank' : undefined}
-              rel={link.external ? 'noopener noreferrer' : undefined}
               className={cn(
                 'flex items-center gap-2 px-3 py-2 text-sm rounded-md transition-colors',
                 pathname === link.href
@@ -115,7 +108,6 @@ function MobileMenuContent({
               )}
             >
               {link.label}
-              {link.external && <ArrowUpRight className="h-3 w-3" />}
             </Link>
           ))}
         </nav>
@@ -264,8 +256,6 @@ function HeaderContent() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  target={link.external ? '_blank' : undefined}
-                  rel={link.external ? 'noopener noreferrer' : undefined}
                   className={cn(
                     'px-3 py-1.5 text-sm rounded-md transition-colors inline-flex items-center gap-1.5',
                     pathname === link.href ||
@@ -275,7 +265,6 @@ function HeaderContent() {
                   )}
                 >
                   {link.label}
-                  {link.external && <ArrowUpRight className="h-3 w-3" />}
                 </Link>
               ))}
             </nav>

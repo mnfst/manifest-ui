@@ -35,11 +35,6 @@ const footerLinks = [
     label: 'Suggest a Block',
     external: true
   },
-  {
-    href: 'https://manifest.build',
-    label: 'Your App in ChatGPT',
-    external: true
-  }
 ]
 
 const socialLinks = [
