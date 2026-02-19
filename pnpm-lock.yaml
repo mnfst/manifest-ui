@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@docsearch/css':
+        specifier: ^4.5.3
+        version: 4.6.0
       '@docsearch/react':
         specifier: ^4.5.3
         version: 4.6.0(@algolia/client-search@5.49.0)(@types/react@19.1.2)(algoliasearch@5.49.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(search-insights@2.17.3)
