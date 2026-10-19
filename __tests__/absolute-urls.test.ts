@@ -70,7 +70,7 @@ function findRelativeUrls(content: string, filePath: string): string[] {
   }
 
   // Also check for common patterns in template literals (usageCode)
-  const templateLiteralPattern = /`[^`]*`/gs
+  const templateLiteralPattern = /`[^`]*`/g
   const templateLiterals = content.match(templateLiteralPattern)
 
   if (templateLiterals) {
@@ -160,7 +160,7 @@ describe('Absolute URL Enforcement', () => {
       const content = readFileSync(PAGE_TSX_PATH, 'utf-8')
 
       // Extract usageCode blocks
-      const usageCodePattern = /usageCode:\s*`([^`]+)`/gs
+      const usageCodePattern = /usageCode:\s*`([^`]+)`/g
       const usageCodes = content.match(usageCodePattern) || []
 
       const relativeUrlsFound: string[] = []

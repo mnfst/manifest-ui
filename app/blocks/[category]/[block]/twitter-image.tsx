@@ -6,8 +6,6 @@ import {
   OG_IMAGE_SIZE
 } from '@/lib/og-image-utils'
 
-export const runtime = 'edge'
-
 export const alt = 'Component Preview'
 export const size = OG_IMAGE_SIZE
 export const contentType = 'image/png'

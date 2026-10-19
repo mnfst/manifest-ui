@@ -86,7 +86,7 @@ describe('SEO Configuration', () => {
     it('should have Open Graph configuration', () => {
       const content = readFileSync(layoutPath, 'utf-8')
       expect(content).toContain('openGraph')
-      expect(content).toMatch(/og:title|title.*openGraph|openGraph.*title/s)
+      expect(content).toMatch(/og:title|title[\s\S]*openGraph|openGraph[\s\S]*title/)
     })
 
     it('should have Twitter Card configuration', () => {
