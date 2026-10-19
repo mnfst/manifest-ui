@@ -62,3 +62,8 @@ next-env.d.ts
 
 # PEM files
 *.pem
+
+# Cloudflare (OpenNext / Wrangler)
+.open-next
+.wrangler
+.dev.vars*

@@ -27,6 +27,7 @@ interface RegistryMeta {
 
 interface RegistryItem {
   name: string
+  type?: string
   categories?: string[]
   meta?: RegistryMeta
   files: Array<{ path: string }>

@@ -58,7 +58,7 @@ function getMainBlockFile(item: RegistryItem): string | null {
  */
 function hasDataProp(content: string): boolean {
   // Match interfaces with data?: { ... } pattern
-  return /interface\s+\w+Props\s*\{[^}]*\bdata\?:/s.test(content)
+  return /interface\s+\w+Props\s*\{[^}]*\bdata\?:/.test(content)
 }
 
 /**
