@@ -1,7 +1,6 @@
 import { Footer } from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
 import { ThemeProvider } from '@/components/theme/theme-provider'
-import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Geist, Geist_Mono } from 'next/font/google'
@@ -148,7 +147,6 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </ThemeProvider>
-        <Analytics />
         <Script
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="eKhcgmrsfM4C1k60A3/UTQ"

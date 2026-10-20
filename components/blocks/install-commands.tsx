@@ -3,7 +3,6 @@
 import { Check, Copy } from 'lucide-react'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
-import { track } from '@vercel/analytics'
 
 type PackageManager = 'npx' | 'pnpm' | 'yarn' | 'bunx'
 
@@ -50,7 +49,6 @@ export function InstallCommands({ componentName }: InstallCommandsProps) {
   const handleCopy = async () => {
     await navigator.clipboard.writeText(currentCommand)
     setCopied(true)
-    track('install_command_copied', { command: currentCommand, inline: false })
     setTimeout(() => setCopied(false), 2000)
   }
 

@@ -3,7 +3,6 @@
 import { Check, Copy } from 'lucide-react'
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { codeToHtml } from 'shiki'
-import { track } from '@vercel/analytics'
 
 interface CodeBlockProps {
   code: string
@@ -59,7 +58,6 @@ export function CodeBlock({
   const handleCopy = useCallback(async () => {
     await navigator.clipboard.writeText(code)
     setCopied(true)
-    track('code_copied', { code })
     // Clear any existing timeout
     if (copyTimeoutRef.current) {
       clearTimeout(copyTimeoutRef.current)
