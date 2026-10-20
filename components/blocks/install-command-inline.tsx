@@ -1,6 +1,5 @@
 'use client'
 
-import { track } from '@vercel/analytics'
 import { Check, ChevronDown, Copy } from 'lucide-react'
 import { useState } from 'react'
 
@@ -51,7 +50,6 @@ export function InstallCommandInline({
   const handleCopy = async () => {
     await navigator.clipboard.writeText(currentCommand)
     setCopied(true)
-    track('install_command_copied', { command: currentCommand, inline: true })
     setTimeout(() => setCopied(false), 2000)
   }
 
